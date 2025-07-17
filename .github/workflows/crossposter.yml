@@ -18,13 +18,9 @@ jobs:
       - name: List files
         run: ls -R
       - name: Install dependencies
-        run: |
-          cd SocialSync
-          npm install
+        run: npm install
       - name: Run script
-        run: |
-          cd SocialSync
-          node src/index.js
+        run: node src/index.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
